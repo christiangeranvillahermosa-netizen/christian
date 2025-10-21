@@ -1,0 +1,40 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double grade1, grade2, grade3;
+    double average;
+    
+    cout << "=== SIMPLE AVERAGE GRADE CALCULATOR ===" << endl;
+
+    cout << "Enter First Grade: ";
+    cin >> grade1;
+    cout << "Enter Second Grade: ";
+    cin >> grade2;
+    cout << "Enter Third Grade: ";
+    cin >> grade3;
+
+    average = (grade1 + grade2 + grade3) / 3;
+
+    float avgFloat = (float) (average);
+
+    cout << fixed << setprecision(2);
+    cout << "\n=== AVERAGE GRADE ===" << endl;
+    cout << "Average Grade: " << avgFloat << endl;
+
+    if (average >= 90 && average <= 100) {
+        cout << "Remarks: Excellent" << endl;
+    } else if (average >= 80 && average <= 89) {
+        cout << "Remarks: Very Good" << endl;
+    } else if (average >= 75 && average <= 79) {
+        cout << "Remarks: Satisfactory" << endl;
+    } else if (average < 75) {
+        cout << "Remarks: Below 74" << endl;
+    } else {
+        cout << "Invalid grade range!" << endl;
+    }
+
+    return 0;
+}
